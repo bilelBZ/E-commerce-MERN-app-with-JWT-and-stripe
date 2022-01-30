@@ -162,6 +162,7 @@ const CartPage = ({ match, location, history }) => {
                         <i className="fas fa-minus" />
                       </Button>
                     </ButtonGroup>
+
                     <Button
                       type="button"
                       onClick={() => handleRemoveFromCart(item.product)}
@@ -243,6 +244,39 @@ const CartPage = ({ match, location, history }) => {
                       </Button>
                     </div>
                   </Col>
+                </Row>
+                <Row>
+                  <div
+                    style={{
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      gap: "10px",
+                      marginBottom: "20px",
+                    }}
+                  >
+                    <Button
+                      onClick={() => {
+                        dispatch(addItem(item.product, Number(item.qty * 2.5)));
+                      }}
+                    >
+                      3 month{" "}
+                    </Button>
+                    <Button
+                      onClick={() => {
+                        dispatch(addItem(item.product, Number(item.qty * 5)));
+                      }}
+                    >
+                      6 month{" "}
+                    </Button>
+                    <Button
+                      onClick={() => {
+                        dispatch(addItem(item.product, Number(item.qty * 7)));
+                      }}
+                    >
+                      9 month{" "}
+                    </Button>
+                  </div>
                 </Row>
               </ListGroup.Item>
             ))}
