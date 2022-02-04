@@ -31,7 +31,7 @@ const orderSchema = mongoose.Schema(
 			type: String,
 			required: true,
 		},
-		// depends on if stripe or paypal method is used
+		// depends on if stripe method is used
 		paymentResult: {
 			id: { type: String },
 			status: { type: String },

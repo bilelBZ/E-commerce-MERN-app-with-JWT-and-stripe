@@ -73,7 +73,7 @@ const Header = () => {
       <Navbar bg="primary" variant="dark" expand="lg">
         <Container>
           <LinkContainer to="/">
-            <Navbar.Brand>SHOPYPAS</Navbar.Brand>
+            <Navbar.Brand>SHOPYAS</Navbar.Brand>
           </LinkContainer>
 
           {/* history is available only inside Route, so this is used */}

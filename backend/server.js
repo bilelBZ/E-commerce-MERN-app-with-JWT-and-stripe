@@ -25,7 +25,7 @@ dotenv.config();
 const app = express();
 
 // use morgan in development mode
-// if (process.env.NODE_ENV == "development") app.use(morgan("dev"));
+if (process.env.NODE_ENV == "development") app.use(morgan("dev"));
 
 // connect to the mongoDB database
 connectDB();

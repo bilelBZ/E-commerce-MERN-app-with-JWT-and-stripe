@@ -118,7 +118,7 @@ const OrderPage = ({ match, history }) => {
           <>
             <Col md={8}>
               <ListGroup variant="flush">
-                <ListGroup.Item>
+                {/* <ListGroup.Item>
                   <h2>Shipping</h2>
                   <p>
                     <strong>Name: </strong>
@@ -145,7 +145,7 @@ const OrderPage = ({ match, history }) => {
                       <Message variant="danger">Not Delivered</Message>
                     )}
                   </div>
-                </ListGroup.Item>
+                </ListGroup.Item> */}
                 <ListGroup.Item>
                   <h2>Payment Method</h2>
                   <p>
@@ -192,7 +192,7 @@ const OrderPage = ({ match, history }) => {
                               {(item.qty * item.price).toLocaleString("en-IN", {
                                 maximumFractionDigits: 2,
                                 style: "currency",
-                                currency: "INR",
+                                currency: "eur",
                               })}
                             </Col>
                           </Row>
@@ -227,7 +227,7 @@ const OrderPage = ({ match, history }) => {
                         {order.itemsPrice.toLocaleString("en-IN", {
                           maximumFractionDigits: 2,
                           style: "currency",
-                          currency: "INR",
+                          currency: "eur",
                         })}
                       </Col>
                     </Row>
@@ -242,7 +242,7 @@ const OrderPage = ({ match, history }) => {
                         {order.taxPrice.toLocaleString("en-IN", {
                           maximumFractionDigits: 2,
                           style: "currency",
-                          currency: "INR",
+                          currency: "eur",
                         })}
                       </Col>
                     </Row>
@@ -256,7 +256,7 @@ const OrderPage = ({ match, history }) => {
                         {order.totalPrice.toLocaleString("en-IN", {
                           maximumFractionDigits: 2,
                           style: "currency",
-                          currency: "INR",
+                          currency: "eur",
                         })}
                       </Col>
                     </Row>
@@ -278,12 +278,11 @@ const OrderPage = ({ match, history }) => {
                                 label: "pay",
                               }}
                               currency="USD"
-                              // converting INR to USD, as paypal cannot support INR
+                              // converting eur to USD, as paypal cannot support eur
                               amount={Number(order.totalPrice / 72).toFixed(2)}
                               onSuccess={successPaymentHandler}
                             />
                           )}
-						  
                         </ListGroup.Item>
                       ) : (
                         <ListGroup.Item>

@@ -126,7 +126,7 @@ const PlaceOrderPage = ({ history }) => {
                               {(item.qty * item.price).toLocaleString("en-IN", {
                                 maximumFractionDigits: 2,
                                 style: "currency",
-                                currency: "INR",
+                                currency: "eur",
                               })}
                             </Col>
                           </Row>
@@ -154,13 +154,13 @@ const PlaceOrderPage = ({ history }) => {
                         {Number(cart.itemsPrice).toLocaleString("en-IN", {
                           maximumFractionDigits: 2,
                           style: "currency",
-                          currency: "INR",
+                          currency: "eur",
                         })}
                       </Col>
                     </Row>
                   </ListGroup.Item>
                   <ListGroup.Item>
-                    <Row>
+                    {/* <Row>
                       <Col>
                         <strong>Shipping</strong>
                       </Col>
@@ -168,10 +168,10 @@ const PlaceOrderPage = ({ history }) => {
                         {Number(cart.shippingPrice).toLocaleString("en-IN", {
                           maximumFractionDigits: 2,
                           style: "currency",
-                          currency: "INR",
+                          currency: "eur",
                         })}
                       </Col>
-                    </Row>
+                    </Row> */}
                   </ListGroup.Item>
                   <ListGroup.Item>
                     <Row>
@@ -182,7 +182,7 @@ const PlaceOrderPage = ({ history }) => {
                         {Number(cart.taxPrice).toLocaleString("en-IN", {
                           maximumFractionDigits: 2,
                           style: "currency",
-                          currency: "INR",
+                          currency: "eur",
                         })}
                       </Col>
                     </Row>
@@ -196,7 +196,7 @@ const PlaceOrderPage = ({ history }) => {
                         {Number(cart.totalPrice).toLocaleString("en-IN", {
                           maximumFractionDigits: 2,
                           style: "currency",
-                          currency: "INR",
+                          currency: "eur",
                         })}
                       </Col>
                     </Row>

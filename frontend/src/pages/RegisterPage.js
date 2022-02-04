@@ -76,15 +76,15 @@ const RegisterPage = ({ location, history }) => {
 					</h1>
 				</div>
 				{message && (
-					<Message dismissible variant='warning' duration={10}>
+					<Message dismissible variant='warning' duration={5}>
 						{message}
 					</Message>
 				)}
-				{error && (
+				{/* {error && (
 					<Message dismissible variant='danger' duration={10}>
-						{error}
+						
 					</Message>
-				)}
+				)} */}
 				{loading ? (
 					<Loader />
 				) : (

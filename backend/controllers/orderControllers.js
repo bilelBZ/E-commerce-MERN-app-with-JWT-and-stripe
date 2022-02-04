@@ -147,20 +147,15 @@ const getAllOrders = asyncHandler(async (req, res) => {
 
 // @desc  create payment intent for stripe payment
 // @route POST /api/orders/stripe-payment
-// @access PUBLIC
 const stripePayment = asyncHandler(async (req, res) => {
   const { price, email } = req.body;
-
-  // Need to create a payment intent according to stripe docs
-  // https://stripe.com/docs/api/payment_intents
   const paymentIntent = await stripe.paymentIntents.create({
     amount: price,
-    currency: "inr",
+    currency: "eur",
     receipt_email: email,
-    payment_method_types: ["card"],
+    payment_method_types: ["bancontact"],
   });
 
-  // send this payment intent to the client side
   res.send({
     clientSecret: paymentIntent.client_secret,
   });
@@ -180,7 +175,7 @@ const stripePayment = asyncHandler(async (req, res) => {
   // 		stripe.charges.create(
   // 			{
   // 				amount: order.totalPrice * 100,
-  // 				currency: 'inr',
+  // 				currency: 'eur',
   // 				customer: customer.id,
   // 				receipt_email: token.email,
   // 				// description: product.name,
