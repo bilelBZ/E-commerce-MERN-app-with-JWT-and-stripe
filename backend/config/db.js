@@ -4,7 +4,7 @@ import mongoose from "mongoose";
 const connectDB = () => {
   mongoose
     .connect(
-      "mongodb+srv://chatApp:chatApp@cluster0.bgkrb.mongodb.net/ChatApp?retryWrites=true&w=majority",
+      "mongodb://127.0.0.1:27017/Utilisateurs",
       {
         useUnifiedTopology: true,
         useNewUrlParser: true,
